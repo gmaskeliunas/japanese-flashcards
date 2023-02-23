@@ -18,7 +18,12 @@ const kanjiCards = [
   {
     kanji: "医者",
     furigana: "いしゃ",
-    translation: "Doctor with longer translation"
+    translation: "Doctor"
+  },
+  {
+    kanji: "日本",
+    furigana: "にほん",
+    translation: "Japan"
   },
 ];
 
