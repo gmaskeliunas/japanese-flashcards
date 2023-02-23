@@ -10,8 +10,8 @@ const Flashcard = ({ kanji, furigana, translation, number, totalNumber, isToggle
       <CardBody>
       <VStack borderRadius="lg" bg="white">
         {isToggledValue ? 
-          <Heading align={"center"} p={"4"} color="black" as='h1' size='4xl'>{kanji}</Heading> :
-          <Heading align={"center"} p={"4"} color="black" as='h1' size='4xl'>{kanji}</Heading>
+          <Text align={"center"} p={"4"} color="black" as='h1' fontSize='6xl'>{kanji}</Text> :
+          <Text align={"center"} p={"4"} color="black" as='h1' fontSize='6xl'>{kanji}</Text>
         }
         {isToggledValue ? <Text alignSelf={"center"} px={"4"} color="black" fontSize='3xl'>{kanji}【{furigana}】: {translation}</Text> : null}
       </VStack>
