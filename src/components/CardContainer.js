@@ -33,7 +33,7 @@ const CardContainer = () => {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleClick = () => {
-    if (num+1!=kanjiCards.length) {
+    if (num+1!==kanjiCards.length) {
       setNum(num+1)
       setIsToggled(!isToggled)
     }
@@ -62,8 +62,7 @@ const CardContainer = () => {
         totalNumber={kanjiCards.length}
         isToggledValue={isToggled}
       />
-
-      {isToggled === true ? <Button colorScheme='blue' onClick={handleClick}>Next</Button> : <Button colorScheme='green' onClick={() => setIsToggled(!isToggled)}>Show</Button>}
+      {isToggled === true ? <Button size='lg' colorScheme='blue' onClick={handleClick}>Next</Button> : <Button size='lg' colorScheme='green' onClick={() => setIsToggled(!isToggled)}>Show</Button>}
       {console.log(isToggled)}
     </FullScreenSection>
   );
