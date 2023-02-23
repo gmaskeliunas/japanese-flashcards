@@ -3,29 +3,32 @@ import FullScreenSection from "./FullScreenSection";
 import { Button, Heading } from "@chakra-ui/react";
 import Flashcard from "./Flashcard";
 import { useState, useEffect, useRef } from "react";
+import * as kanjiData from '../kanjis/kanjis.json';
 
-const kanjiCards = [
-  {
-    kanji: "学生",
-    furigana: "がくせい",
-    translation: "Student"
-  },
-  {
-    kanji: "先生",
-    furigana: "せんせい",
-    translation: "Teacher"
-  },
-  {
-    kanji: "医者",
-    furigana: "いしゃ",
-    translation: "Doctor"
-  },
-  {
-    kanji: "日本",
-    furigana: "にほん",
-    translation: "Japan"
-  },
-];
+const kanjiCards = kanjiData;
+
+// const kanjiCards = [
+//   {
+//     kanji: "学生",
+//     furigana: "がくせい",
+//     translation: "Student"
+//   },
+//   {
+//     kanji: "先生",
+//     furigana: "せんせい",
+//     translation: "Teacher"
+//   },
+//   {
+//     kanji: "医者",
+//     furigana: "いしゃ",
+//     translation: "Doctor"
+//   },
+//   {
+//     kanji: "日本",
+//     furigana: "にほん",
+//     translation: "Japan"
+//   },
+// ];
 
 const CardContainer = () => {
 
