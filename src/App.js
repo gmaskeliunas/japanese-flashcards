@@ -12,11 +12,9 @@ function App() {
         <link rel="canonical" href="https://gmaskeliunas.github.io/japanese-flashcards/" />
         <meta name="description" content="Kanji flashcard app" />
       </Helmet>
-      <ChakraProvider>
-        <main>
-          <CardContainer />
-        </main>
-      </ChakraProvider>
+      <main>
+        <CardContainer />
+      </main>
     </div>
   );
 }

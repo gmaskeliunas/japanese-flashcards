@@ -1,25 +1,35 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Flashcard = ({ kanji, furigana, translation, number, totalNumber, isToggledValue }) => {
+const Flashcard = ({ kanji, furigana, translation, number, totalNumber, isToggledValue, isFinishedValue }) => {
   return (
-    <Card w="lg" h="20rem">
-      <CardBody>
-      <VStack borderRadius="lg" bg="white">
-        {isToggledValue ? 
-          <Text align={"center"} p={"4"} color="black" as='h1' fontSize='6xl'>{kanji}</Text> :
-          <Text align={"center"} p={"4"} color="black" as='h1' fontSize='6xl'>{kanji}</Text>
-        }
-        {isToggledValue ? <Text alignSelf={"center"} px={"4"} color="black" fontSize='3xl'>{kanji}【{furigana}】: {translation}</Text> : null}
-      </VStack>
-      </CardBody>
-      <CardFooter>
-        <Text align={"bottom"} color="black">{number}/{totalNumber}</Text>
-      </CardFooter>
-    </Card>
+    <div className="app__flashcard-wrapper">
+      {!isFinishedValue &&
+      <div>
+        <div className="app__flashcard-container">
+          {isToggledValue ?
+            <p className="app__flashcard-kanji">{kanji}</p> :
+            <p className="app__flashcard-kanji">{kanji}</p>
+          }
+          {isToggledValue ? <p className="app__flashcard-translation">{kanji}【{furigana}】: {translation}</p> : null}
+        </div>
+      </div>
+      }
+      {!isFinishedValue &&
+      <div className="app__flashcard-counter">
+        <p >{number}/{totalNumber}</p>
+      </div>
+      }
+      {isFinishedValue &&
+        <div>
+          <div>
+            <h1 className="app__flashcard-finished_header">Finished!</h1>
+            <button className="app__flashcard-finished_button">Restart</button>
+          </div>
+        </div>
+      }
+    </div>
   );
 };
 

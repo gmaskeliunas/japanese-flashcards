@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__card-container_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* margin-top: 5vh; */
+}
+
+.app__card-container_paragraph {
+  margin: 30px;
+  font-size: 1.5rem;
+}
+
+.app__card-container_randomize-button {
+  display: none;
+  cursor: pointer;
+  grid-area: button;
+  font-size: 1.5em;
+  padding: 15px 40px;
+  background-color: #c0d465;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.1s ease-in;
+}
+
+.app__card-container_randomize-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.app__card-container_randomize-button:active {
+  background-color: #829142;
+}
+
+.app__card-container_flashcards-header {
+  margin: 30px;
+}
+
+.app__flashcard-wrapper {
+  display: grid;
+  padding: 60px;
+  margin: 30px 0;
+  min-width: 30vw;
+  min-height: 36vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.app__flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__flashcard-kanji {
+  align-self: center;
+  justify-self: center;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.app__flashcard-translation {
+  align-self: center;
+  justify-self: center;
+  max-width: 29vw;
+  max-height: 34vh;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.app__flashcard-counter {
+  align-self: flex-end;
+  justify-self: start;
+}
+
+.app__flashcard-counter p {
+  font-size: 1.5rem;
+}
+
+.app__flashcard-finished_header {
+
+}
+
+.app__flashcard-finished_button {
+
+}
+
+.app__card-container_next-button {
+  cursor: pointer;
+  grid-area: button;
+  font-size: 1.5em;
+  padding: 15px 40px;
+  background-color: #59af60;
   color: white;
+  border-radius: 8px;
+  min-width: 150px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.1s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.app__card-container_next-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__card-container_next-button:active {
+  background-color: #3d7942;
+  transition: background-color 0.1s ease-in;
+}
+
+.app__card-container_show-button {
+  cursor: pointer;
+  grid-area: button;
+  font-size: 1.5em;
+  padding: 15px 40px;
+  background-color: #656cd4;
+  color: white;
+  border-radius: 8px;
+  min-width: 150px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.1s ease-in;
+}
+
+.app__card-container_show-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.app__card-container_show-button:active {
+  background-color: #363c92;
+  transition: background-color 0.1s ease-in;
+}
+
+@media screen and (max-width: 2000px) {
+
+}
+
+@media screen and (max-width: 1150px) {
+
+  .app__flashcard-wrapper {
+    min-width: 50%;
+    min-height: 40vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 650px) {
+
+  .app__card-container_randomize-button {
+    font-size: 1.2rem;
   }
+
+  .app__card-container_paragraph {
+    margin: 30px;
+    font-size: 1rem;
+  }
+  .app__flashcard-kanji {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .app__flashcard-wrapper {
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 70%;
+    min-height: 30vh;
+  }
+
+  .app__flashcard-translation {
+    min-width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .app__flashcard-counter p {
+    font-size: 1rem;
+  }
+
+  .app__card-container_next-button {
+    font-size: 1.2rem;
+    padding: 12px 40px;
+    min-width: 150px;
+    border-radius: 8px;
+  }
+
+  .app__card-container_show-button {
+    font-size: 1.2rem;
+    padding: 12px 40px;
+    min-width: 150px;
+    border-radius: 8px;
+  }
+
 }
